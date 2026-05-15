@@ -373,113 +373,6 @@
       margin-top: 0.05rem;
     }
 
-    /* ─── Booking form ───────────────────────────────────────────────── */
-    .booking { background: var(--green-pale); }
-
-    .form-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 2.4rem;
-      box-shadow: var(--shadow);
-      max-width: 560px;
-      margin: 2rem auto 0;
-    }
-
-    .form-card h3 {
-      text-align: center;
-      margin-bottom: 1.8rem;
-      font-size: 1.6rem;
-    }
-
-    .field {
-      margin-bottom: 1.2rem;
-    }
-
-    .field label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      margin-bottom: 0.4rem;
-      color: var(--green-dark);
-    }
-
-    .field input,
-    .field textarea,
-    .field select {
-      width: 100%;
-      padding: 0.78rem 1rem;
-      border: 1.5px solid var(--sand-dark);
-      border-radius: 8px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      color: var(--text);
-      background: var(--sand);
-      transition: border-color 0.2s, box-shadow 0.2s;
-      outline: none;
-      -webkit-appearance: none;
-    }
-
-    .field input:focus,
-    .field textarea:focus,
-    .field select:focus {
-      border-color: var(--green-mid);
-      box-shadow: 0 0 0 3px rgba(77, 107, 92, 0.12);
-      background: var(--white);
-    }
-
-    .field textarea { resize: vertical; min-height: 90px; }
-
-    .field-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    @media (max-width: 480px) {
-      .field-row { grid-template-columns: 1fr; }
-    }
-
-    .form-note {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    /* Form states */
-    #form-success {
-      display: none;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    #form-success .success-icon {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-    }
-
-    #form-success h3 {
-      margin-bottom: 0.6rem;
-      font-size: 1.8rem;
-    }
-
-    #form-success p {
-      color: var(--text-muted);
-    }
-
-    #form-error {
-      display: none;
-      background: #fdf0f0;
-      border: 1px solid #f5c6c6;
-      border-radius: 8px;
-      padding: 0.8rem 1rem;
-      font-size: 0.88rem;
-      color: #c0392b;
-      margin-top: 0.8rem;
-      text-align: center;
-    }
-
     /* ─── FAQ ────────────────────────────────────────────────────────── */
     .faq { background: var(--white); }
 
@@ -559,7 +452,7 @@
       <li><a href="#location">Location</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a class="btn" href="#prenota" style="padding: 0.6rem 1.4rem; font-size: 0.82rem;">Prenota</a>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc30NInrMS6pGxcaT6G9sNQgub-xRXF49b0z92nh6UBcN3k6A/viewform" target="_blank" rel="noopener" style="padding: 0.6rem 1.4rem; font-size: 0.82rem;">Prenota</a>
   </div>
 </nav>
 
@@ -578,7 +471,7 @@
     </p>
     <span class="scarcity-badge">Posti limitati — massimo 10 partecipanti</span>
     <br />
-    <a class="btn btn-lg" href="#prenota">Prenota il tuo posto</a>
+    <a class="btn btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSc30NInrMS6pGxcaT6G9sNQgub-xRXF49b0z92nh6UBcN3k6A/viewform" target="_blank" rel="noopener">Prenota il tuo posto</a>
   </div>
 </section>
 
@@ -733,70 +626,10 @@
         <li>Accesso alla piscina e alla location</li>
         <li>Materiale necessario per le pratiche</li>
       </ul>
-      <a class="btn btn-full" href="#prenota">Riserva ora il tuo posto</a>
+      <a class="btn btn-full" href="https://docs.google.com/forms/d/e/1FAIpQLSc30NInrMS6pGxcaT6G9sNQgub-xRXF49b0z92nh6UBcN3k6A/viewform" target="_blank" rel="noopener">Riserva ora il tuo posto</a>
       <p style="font-size:0.82rem; color:var(--text-muted); margin-top:1rem; margin-bottom:0;">
         Posti limitati a 10 partecipanti
       </p>
-    </div>
-  </div>
-</section>
-
-<div class="wrap"><div class="divider">· · ·</div></div>
-
-<!-- ─── Booking form ───────────────────────────────────────────────────── -->
-<section class="booking" id="prenota">
-  <div class="wrap">
-    <h2 style="text-align:center;">Invia la tua candidatura</h2>
-    <p style="text-align:center; color:var(--text-muted); margin-top:-0.4rem;">
-      Compila il modulo e ti contatteremo per confermare il tuo posto.
-    </p>
-
-    <div class="form-card">
-      <div id="form-success">
-        <div class="success-icon">🌿</div>
-        <h3>Grazie!</h3>
-        <p>La tua richiesta è stata inviata con successo.<br>Ti contatteremo presto per confermare il tuo posto.</p>
-      </div>
-
-      <form id="bookingForm">
-        <div class="field-row">
-          <div class="field">
-            <label for="nome">Nome *</label>
-            <input type="text" id="nome" name="nome" placeholder="Es. Sofia" required />
-          </div>
-          <div class="field">
-            <label for="cognome">Cognome *</label>
-            <input type="text" id="cognome" name="cognome" placeholder="Es. Rossi" required />
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="email">Indirizzo Email *</label>
-          <input type="email" id="email" name="email" placeholder="nome@email.com" required />
-        </div>
-
-        <div class="field">
-          <label for="telefono">Numero di Telefono</label>
-          <input type="tel" id="telefono" name="telefono" placeholder="+39 333 000 0000" />
-        </div>
-
-        <div class="field">
-          <label for="intolleranze">Hai intolleranze alimentari o allergie?</label>
-          <textarea id="intolleranze" name="intolleranze" placeholder="Elenca eventuali intolleranze o allergie…"></textarea>
-        </div>
-
-        <div class="field">
-          <label for="messaggio">Richieste o note particolari</label>
-          <textarea id="messaggio" name="messaggio" placeholder="Qualsiasi cosa vuoi condividere con noi…"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-full" id="submitBtn">Invia Richiesta</button>
-        <div id="form-error">Si è verificato un errore. Riprova o contattaci direttamente.</div>
-        <p class="form-note">
-          Compilando il modulo accetti che i tuoi dati vengano usati esclusivamente
-          per la gestione della prenotazione.
-        </p>
-      </form>
     </div>
   </div>
 </section>
@@ -852,8 +685,9 @@
       <details>
         <summary>Come posso prenotare?</summary>
         <p class="faq-answer">
-          Puoi prenotare compilando il modulo su questa pagina, tramite il link in bio
-          oppure scrivendo direttamente in DM.
+          Puoi prenotare tramite il modulo online cliccando su
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc30NInrMS6pGxcaT6G9sNQgub-xRXF49b0z92nh6UBcN3k6A/viewform" target="_blank" rel="noopener" style="color:var(--green-dark); font-weight:600;">questo link</a>,
+          tramite il link in bio oppure scrivendo direttamente in DM.
         </p>
       </details>
 
@@ -878,44 +712,6 @@
   </p>
 </footer>
 
-<!-- ─── Form script ───────────────────────────────────────────────────── -->
-<script>
-  // ⚠️  Paste your Google Apps Script Web App URL here after deploying
-  const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
-
-  const form       = document.getElementById('bookingForm');
-  const submitBtn  = document.getElementById('submitBtn');
-  const successEl  = document.getElementById('form-success');
-  const errorEl    = document.getElementById('form-error');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    errorEl.style.display = 'none';
-
-    submitBtn.textContent = 'Invio in corso…';
-    submitBtn.disabled = true;
-
-    try {
-      await fetch(SCRIPT_URL, {
-        method: 'POST',
-        body: new FormData(form),
-        // no-cors because Apps Script doesn't send CORS headers on redirect
-        mode: 'no-cors',
-      });
-
-      // With no-cors we can't read the response, but if fetch didn't throw we
-      // treat it as success.
-      form.style.display = 'none';
-      successEl.style.display = 'block';
-
-    } catch (err) {
-      console.error(err);
-      submitBtn.textContent = 'Invia Richiesta';
-      submitBtn.disabled = false;
-      errorEl.style.display = 'block';
-    }
-  });
-</script>
 
 </body>
 </html>
